@@ -21,13 +21,13 @@ let hoursToMars = milesToMars / shuttleSpeedMph;
 let daysToMars = hoursToMars / 24;
 
 /*
-console.log(milesToMars); //3937500000000
-console.log(hoursToMars); //225000000
-console.log(daysToMars); //9375000
+console.log(milesToMars); //139725000
+console.log(hoursToMars); //7984.285714285715
+console.log(daysToMars); //332.67857142857144
 */
 
 // Print the results of the space mission calculations below
-console.log(shuttleName, "will take", daysToMars,  "days to reach Mars."); //Determination will take 9375000 days to reach Mars.
+console.log(shuttleName, "will take", daysToMars,  "days to reach Mars."); //Determination will take 332.67857142857144 days to reach Mars.
 
 // Calculate a trip to the moon below
 let milesToMoon = distanceToMoonKm * milesPerKm;
@@ -35,10 +35,10 @@ let hoursToMoon = milesToMoon / shuttleSpeedMph;
 let daysToMoon = hoursToMoon / 24;
 
 /*
-console.log(milesToMoon); //6727000000
-console.log(hoursToMoon); //384400
-console.log(daysToMoon); //16016.666666666666
+console.log(milesToMoon); //238712.4
+console.log(hoursToMoon); //13.64070857142857
+console.log(daysToMoon); //0.5683628571428571
 */
 
 // Print the results of the trip to the moon below
-console.log(shuttleName, "will take", daysToMoon,  "days to reach the Moon."); //Determination will take 16016.666666666666 days to reach the Moon.
+console.log(shuttleName, "will take", daysToMoon,  "days to reach the Moon."); //Determination will take 0.5683628571428571 days to reach the Moon.
