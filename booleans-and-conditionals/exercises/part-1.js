@@ -111,7 +111,7 @@ if (fuelLevel < 1000 || engineTemperature > 3500 || engineIndicatorLight === "re
 }
 
 let commandOverride = true; //prints 'ENGINE FAILURE IMMINENT! Cleared to launch!'
-commandOverride = false; //prints 'ENGINE FAILURE IMMINENT! Launch scrubbed!'git
+commandOverride = false; //prints 'ENGINE FAILURE IMMINENT! Launch scrubbed!'
 
 if (fuelLevel > 20000 && engineIndicatorLight === !"red blinking" || commandOverride === true) {
    console.log ("Cleared to launch!")
