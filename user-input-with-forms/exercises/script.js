@@ -1,9 +1,11 @@
+
 const input = require('readline-sync');
 
 let name = input.question("First Name: ");
 let otherName = input.question("Last Name: ");
 
 console.log("Last, First: " + otherName + " , " + name + " "); // creates three rows, one for each name then both
+
 
 /* 
 const input = require('readline-sync');
