@@ -9,13 +9,14 @@ let fuelMassKg = 760000 + " kg";
 let shuttleMassKg =	74842.31 + " kg";
 let totalMassKg = crewMassKg + fuelMassKg + shuttleMassKg;
 let maximumMassLimit = 850000 + " kg";
-let fuelTempCelsius = -225 + " °C";
+let fuelTempCelsius = -225;
 let minimumFuelTemp = -300;
 let maximumFuelTemp = -150;
 let fuelLevel =	100 + "%";
 let weatherStatus =	"clear";
 let preparedForLiftOff = true;
 // add logic below to verify total number of astronauts for shuttle launch does not exceed 7
+/*
 if (astronautCount <= 7) {
     console.log ("Conditions are met!");
 } else {
@@ -35,7 +36,7 @@ if (totalMassKg < maximumMassLimit) {
 } 
 
 //not met for some reason
-if (fuelTempCelsius >= -300 || fuelTempCelsius <= -150) {
+if (fuelTempCelsius >= -300 && fuelTempCelsius <= -150) {
     console.log ("Conditions are met!");
 } else {
     console.log ("Conditions NOT met!");
@@ -48,11 +49,11 @@ if (fuelLevel === 100 + "%") {
 } 
 
 if (weatherStatus === "clear") {
-    console.log ("Conditions are met!");
+    console.log ("Conditions are met! \n");
 } else {
     console.log ("Conditions NOT met!");
 } 
-
+*/
 // add logic below to verify all astronauts are ready
 
 // add logic below to verify the total mass does not exceed the maximum limit of 850000
@@ -64,17 +65,21 @@ if (weatherStatus === "clear") {
 // add logic below to verify the weather status is clear
 
 // Verify shuttle launch can proceed based on above conditions
+if(astronautCount <= 7 && astronautStatus === "ready" && totalMassKg < maximumMassLimit && (fuelTempCelsius >= -300 || fuelTempCelsius <= -150) && fuelLevel === 100 + "%" && weatherStatus === "clear") {
+    console.log ("All systems are a go! Initiating space shuttle launch sequence.");
+} else {
+    console.log ("NOT clear to launch!");
+}
 
-console.log ();
-console.log (".....................................................");
-console.log ("Date: " + date);
-console.log ("Time: " + time);
-console.log ("Astronaut Count: " + astronautCount);
-console.log ("Crew Mass: " + crewMassKg);
-console.log ("Fuel Mass: " + fuelMassKg);
-console.log ("Shuttle Mass: " + shuttleMassKg);
-console.log ("Total Mass: " + totalMassKg);
-console.log ("Fuel Temperature: " + fuelTempCelsius);
-console.log ("Weather Status: " + weatherStatus);
-console.log (".....................................................");
-console.log ("Have a safe trip astronauts!!");
+    console.log (".....................................................");
+    console.log ("Date: " + date);
+    console.log ("Time: " + time);
+    console.log ("Astronaut Count: " + astronautCount);
+    console.log ("Crew Mass: " + crewMassKg);
+    console.log ("Fuel Mass: " + fuelMassKg);
+    console.log ("Shuttle Mass: " + shuttleMassKg);
+    console.log ("Total Mass: " + totalMassKg);
+    console.log ("Fuel Temperature: " + fuelTempCelsius);
+    console.log ("Weather Status: " + weatherStatus + " °C");
+    console.log (".....................................................");
+    console.log ("Have a safe trip astronauts!!");
