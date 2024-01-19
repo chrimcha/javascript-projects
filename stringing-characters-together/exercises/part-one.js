@@ -11,10 +11,10 @@ let num = 1001;
 //console.log(num.length); //returns 4, since there are 4 integers in 1001
 //console.log(typeof num); //returns string, because num was converted to a string
 
-////Follow up: Print the number of digits in a DECIMAL value (e.g. num = 123.45 has 5 digits but a length of 6).
+//Follow up: Print the number of digits in a DECIMAL value (e.g. num = 123.45 has 5 digits but a length of 6).
 // num = 123.45;
 
-// console.log(num.toString().replace(".","").length); //returns 5
+console.log(num.toString().replace(".","").length); //returns 5
 
 //or could use below to acheive the same result as above
 // num = String(num);
@@ -38,9 +38,9 @@ if (num.toString().includes(".")) {
     console.log(`Integer has ${num.toString().length} numbers.`);
 }
 
-//solution from textbook
-if (String(num).includes('.')) {
-    console.log(String(num).length-1);
-} else {
-    console.log(String(num).length);
-}
+// //solution from textbook
+// if (String(num).includes('.')) {
+//     console.log(String(num).length-1);
+// } else {
+//     console.log(String(num).length);
+// }

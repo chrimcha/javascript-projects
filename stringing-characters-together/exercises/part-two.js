@@ -47,3 +47,4 @@ console.log(`${dna.slice(4,7).toLowerCase()}o ${dna.slice(dna.indexOf('CAT'),dna
 
 //or use below code to return taco cat
 console.log(dnaTwo.replace(dnaTwo,"taco cat"));
+
