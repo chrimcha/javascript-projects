@@ -1,12 +1,17 @@
 const input = require('readline-sync');
 let str = "LaunchCode";
-let answer = input.question("Number of letters to be relocated? ");
+let answer = Number(input.question("Number of letters to be relocated? "));
+
+if (Number.isNaN(answer) || answer < 0 || answer > str.length) {
+    answer = 3;
+}
+
 let newStr = str.slice(answer, 10);
 let theRightString = newStr + str.slice(0, answer);
 
-
 console.log(`This is the new string: ${theRightString} 
 and this is the original string is: ${str}.`);
+
 
 
 //1) Use string methods to remove the first three characters from the string and add them to the end.

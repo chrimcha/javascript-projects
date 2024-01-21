@@ -79,7 +79,7 @@ if(astronautCount <= 7 && astronautStatus === "ready" && totalMassKg < maximumMa
     console.log ("Fuel Mass: " + fuelMassKg);
     console.log ("Shuttle Mass: " + shuttleMassKg);
     console.log ("Total Mass: " + totalMassKg);
-    console.log ("Fuel Temperature: " + fuelTempCelsius);
-    console.log ("Weather Status: " + weatherStatus + " °C");
+    console.log ("Fuel Temperature: " + fuelTempCelsius + " °C");
+    console.log ("Weather Status: " + weatherStatus);
     console.log (".....................................................");
     console.log ("Have a safe trip astronauts!!");
