@@ -9,7 +9,7 @@ let astronautAboard = Number(input.question("Enter number of astronauts: "));
 /*Exercise #4: Construct while loops to do the following:
   a. Query the user for the starting fuel level. Validate that the user enters a positive, integer value greater than 5000 but less than 30000. */
 
-while (startingFuelLevel < 5000 || startingFuelLevel > 30000 || isNaN(startingFuelLevel)) {
+while (isNaN(startingFuelLevel || startingFuelLevel < 5000 || startingFuelLevel > 30000)) {
   if (isNaN(startingFuelLevel)) {
     startingFuelLevel = input.question("Only accepts numbers. Enter a number: ");
   } else if (startingFuelLevel < 5000) {
@@ -22,7 +22,7 @@ while (startingFuelLevel < 5000 || startingFuelLevel > 30000 || isNaN(startingFu
 console.log(`Fuel Level: ${startingFuelLevel}`);
 
 //b. Use a second loop to query the user for the number of astronauts (up to a maximum of 7). Validate the entry.
-while (astronautAboard > 7 || isNaN(astronautAboard) || astronautAboard < 0) {
+while (isNaN(astronautAboard) || astronautAboard > 7 || astronautAboard < 0) {
   if (isNaN(astronautAboard)) {
     astronautAboard = input.question("Only Accepts numbers. Enter a number: ");
   } else if (astronautAboard > 7) {
