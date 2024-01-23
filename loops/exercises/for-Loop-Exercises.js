@@ -71,7 +71,7 @@ for (let i = 0; i < origArr.length; i++) {
   if (origArr[i] % 2 !== 0) {
     odds.push(origArr[i]);
   } else {
-    evens.push(origArr[i])
+    evens.push(origArr[i]);
   }
 }
 
