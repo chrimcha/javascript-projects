@@ -2,4 +2,4 @@ function callMe(func) {
     func();
 }
 
-callMe("Al");
+callMe("Al"); // returns "TypeError: func is not a function"
