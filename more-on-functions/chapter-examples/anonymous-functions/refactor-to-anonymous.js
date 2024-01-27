@@ -32,8 +32,8 @@ let f2 = f1;
 
 //Which of the following are valid ways of invoking the anonymous function with the argument "abcd"? (Choose all that apply.)
 
-1. f1("abcd"); //no
-2. function("abcd"); //yes
-3. f2("abcd"); //yes
+// 1. f1("abcd"); //no
+// 2. function("abcd"); //yes
+// 3. f2("abcd"); //yes
 
 

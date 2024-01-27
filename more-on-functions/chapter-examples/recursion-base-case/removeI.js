@@ -4,7 +4,7 @@
  //Consider the code sample below, which declares the removeI function.
  
 function removeI(arr) {
-    if (/*enter base case test here*/){
+    if (arr.indexOf('i')===-1){
       return arr;
     } else {
       arr.splice(arr.indexOf('i'),1);
