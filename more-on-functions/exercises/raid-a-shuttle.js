@@ -20,7 +20,8 @@ function holdStatus(arr){
 
 let fuelLevel = 200000;
 let cargoHold = ['meal kits', 'space suits', 'first-aid kit', 'satellite', 'gold', 'water', 'AE-35 unit'];
-
+// console.log(fuelLevel);
+// console.log(cargoHold);
 let anotherInnocentVariable = function(array) {
   let stolenItems = [];
 
@@ -61,6 +62,8 @@ function irs(levelOfFuel, itemsInCargo) {
 irs(fuelLevel, cargoHold);
 console.log("Fuel level: " + checkFuel(fuelLevel));
 console.log("Hold status: " + holdStatus(cargoHold));
+// console.log(fuelLevel);
+// console.log(cargoHold);
 
 /// Steal some fuel from the shuttle:
  
