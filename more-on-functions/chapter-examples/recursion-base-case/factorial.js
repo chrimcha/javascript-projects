@@ -28,11 +28,7 @@ let isPositiveNum = function(n) {
 };
 
 let isNumber = function(n) {
-<<<<<<< HEAD
   return typeof n === "string";
-=======
-  return isNaN(n) === "number";
->>>>>>> 6be0853788cc3a1c4987f43234bb4b72a779b703
 };
 
 let includesDecimal = function(n) {
@@ -41,11 +37,7 @@ let includesDecimal = function(n) {
 
 
 console.log(factorial(getValidInput("Enter a positive number: ", isPositiveNum)));
-<<<<<<< HEAD
-// console.log(factorial(getValidInput("Enter a number: ", isNumber))); //need to fix isNumber
-=======
 console.log(factorial(getValidInput("Enter a number: ", isNumber))); //need to fix isNumber
->>>>>>> 6be0853788cc3a1c4987f43234bb4b72a779b703
 console.log(factorial(getValidInput("Enter a number: ", includesDecimal))); //need to fix
 
 
