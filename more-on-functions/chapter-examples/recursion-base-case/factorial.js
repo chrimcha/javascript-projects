@@ -28,16 +28,16 @@ let isPositiveNum = function(n) {
 };
 
 let isNumber = function(n) {
-  return isNaN(n) === String;
+  return typeof n === "string";
 };
 
 let includesDecimal = function(n) {
-  return n.includes(".");
+  return String(n).includes(".");
 };
 
 
-// console.log(factorial(getValidInput("Enter a positive number: ", isPositiveNum)));
-//console.log(factorial(getValidInput("Enter a number: ", isNumber))); //need to fix isNumber
+console.log(factorial(getValidInput("Enter a positive number: ", isPositiveNum)));
+// console.log(factorial(getValidInput("Enter a number: ", isNumber))); //need to fix isNumber
 console.log(factorial(getValidInput("Enter a number: ", includesDecimal))); //need to fix
 
 
