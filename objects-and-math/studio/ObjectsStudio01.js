@@ -8,7 +8,7 @@ function selectRandomEntry(arr){
 function buildCrewArray(ids, candidates){
   newCrew = []
   for (i = 0; i < ids.length; i++) {
-    for (j = 0; j = candidates.length; j++) {
+    for (j = 0; j < candidates.length; j++) {
       if (candidates[j].astronautID === ids[i]) {
         newCrew.push(candidates[j])
       }
