@@ -1,5 +1,5 @@
 function randomSelection(arr){
-   let index = Math.floor(Math.random()*arr.length);
+   let index = Math.floor(Math.random()*arr.length); //uses floor to get number because 8 over the array length and could not return anything at index 8
    return arr[index];
  }
  
