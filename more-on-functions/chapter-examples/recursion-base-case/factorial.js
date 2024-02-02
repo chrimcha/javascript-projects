@@ -28,11 +28,11 @@ let isPositiveNum = function(n) {
 };
 
 let isNumber = function(n) {
-  return isNaN(n) === "number";
+  return typeof n === "string";
 };
 
 let includesDecimal = function(n) {
-  return n.includes(".");
+  return String(n).includes(".");
 };
 
 
