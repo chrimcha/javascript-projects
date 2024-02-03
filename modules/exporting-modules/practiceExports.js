@@ -14,3 +14,12 @@ function randomArrayElement(arr){
     let index = Math.floor(Math.random()*arr.length);
     return arr[index];
 }
+
+
+// module.exports = isPalindrome; //this line of code makes the single function "isPalindrome" available in other files!!!
+
+module.exports = {
+    isPalindrome: isPalindrome,
+    evenOrOdd: evenOrOdd,
+    randomArrayElement: randomArrayElement    
+} //this object allows multiple functions to be exported from this file
