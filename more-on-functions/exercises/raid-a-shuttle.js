@@ -51,17 +51,18 @@ let safeNormalName = function(n) {
    }
 };
 
-// console.log(safeNormalName(fuelLevel));
+console.log(safeNormalName(fuelLevel));
 
 function irs(levelOfFuel, itemsInCargo) {
   let stolenItems = anotherInnocentVariable(itemsInCargo);
+  console.log(stolenItems);
 
   return console.log(`\n Raided ${safeNormalName(levelOfFuel)}kg of fuel from the tanks, and stole ${stolenItems[0]} and ${stolenItems[1]} from the cargo hold.\n`)
 }
 
 irs(fuelLevel, cargoHold);
-console.log("Fuel level: " + checkFuel(fuelLevel));
-console.log("Hold status: " + holdStatus(cargoHold));
+// console.log("Fuel level: " + checkFuel(fuelLevel));
+// console.log("Hold status: " + holdStatus(cargoHold));
 // console.log(fuelLevel);
 // console.log(cargoHold);
 

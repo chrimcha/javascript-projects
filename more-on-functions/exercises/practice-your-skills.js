@@ -44,10 +44,10 @@ let triplesValue = function(n) {
 
 };
 
-// console.log(triplesValue("g"));
-// console.log(triplesValue("$"));
-// console.log(triplesValue("4"));
-// console.log(triplesValue(4));
+console.log(triplesValue("g"));
+console.log(triplesValue("$"));
+console.log(triplesValue("4")); //
+console.log(triplesValue(4));
 
 /* Add to your code! Use your function and the map method to change an array  as follows:
 a) Triple any the numbers.
