@@ -9,7 +9,7 @@ let tortoiseOne = {
 //   }
 };
 
-// console.log(tortoiseOne["name"]); //bracket  notation
+console.log(tortoiseOne["name"]); //bracket  notation
 // console.log(tortoiseOne.name); //dot notation
 
 //(objects) are mutable (example below)
