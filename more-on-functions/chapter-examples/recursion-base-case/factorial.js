@@ -24,15 +24,24 @@ function factorial(integer){
 }
 
 let isPositiveNum = function(n) {
-  return n > 0;
+  if (n > 0) {
+    return n
+  }
+    return `Error: ${n} is not a positive number!`;
 };
 
 let isNumber = function(n) {
-  return typeof n === "string";
+  if (typeof n === "string") {
+    return n
+  }
+    return `Error: ${n} is not a number!`;
 };
 
 let includesDecimal = function(n) {
-  return String(n).includes(".");
+  if (String(n).includes(".")) {
+    return n
+  }
+    return `Error: ${n} as a decimal!`;
 };
 
 
