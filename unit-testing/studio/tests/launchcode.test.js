@@ -39,7 +39,23 @@ describe("Testing launchcode", function(){
   });
 
   test("numbers divisible by 2 and 3 should return 'LaunchCode!'", function() {
-    expect(launchcode.launchOutput(3)).toBe('LaunchCode!');
-    expect(launchcode.launchOutput(2)).toBe('LaunchCode!');
+    expect(launchcode.launchOutput(18)).toBe('LaunchCode!');
   });
+
+  test("numbers divisible by 2 and 5 should return 'Launch Rocks! (CRASH!!!!)'", function() {
+    expect(launchcode.launchOutput(10)).toBe('Launch Rocks! (CRASH!!!!)');
+  });
+
+  test("numbers divisible by 3 and 5 should return 'Code Rocks!'", function() {
+    expect(launchcode.launchOutput(15)).toBe('Code Rocks!');
+  });
+
+  test("numbers divisible by 2 and 3 and 5 should return 'LaunchCode Rocks!'", function() {
+    expect(launchcode.launchOutput(30)).toBe('LaunchCode Rocks!');
+  });
+
+  test("numbers NOT divisible by 2 and 3 and 5 should return 'Rutabagas! That doesn't work.'", function() {
+    expect(launchcode.launchOutput(7)).toBe("Rutabagas! That doesn't work.");
+  });
+
 });
