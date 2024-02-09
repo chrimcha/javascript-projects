@@ -8,8 +8,18 @@ describe("transmission processor", function() {
       expect(typeof result).toBe("object");
   });
 
+  test("trims leading and trailing whitespace from transmission", function() {
+    let result = processor("   9701::<487297403495720912>   ");
+    expect(result).toBe(result.trim());
+  });
+
   test("returns -1 if '::' not found", function() {
     let result = processor("9701<489584872710>");
+    expect(result).toBe(-1);
+  });
+
+  test("returns -1 if more than one '::' found", function() {
+    let result = processor("9701::<48729::7403495720912>");
     expect(result).toBe(-1);
   });
   
@@ -23,6 +33,11 @@ describe("transmission processor", function() {
     expect(result.id).toBe(9701);
   });
 
+  test("returns -1 if id cannot be converted to number", function() {
+    let result = processor("&90-::<489584872710>");
+    expect(result.id).toBe(-1);
+  });
+
   test("returns rawData in object", () => {
     let result = processor("9701::<487297403495720912>");
     expect(result.rawData).not.toBeUndefined();
@@ -32,6 +47,10 @@ describe("transmission processor", function() {
     let result = processor("9701::487297403495720912>");
     expect(result.rawData).toBe(-1);
   });
-  
+
+  test("do not include < > symbols in the value assigned to rawData", () => {
+    let result = processor("487297403495720912");
+    expect(result.rawData).toBe();
+  });
 
 });
