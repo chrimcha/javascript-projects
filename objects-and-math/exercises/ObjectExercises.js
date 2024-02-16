@@ -46,6 +46,8 @@ let tardigradeOne	= {
 // After you have created the other object literals, add the astronautID property to each one.
 let crewMembers = [superChimpOne, superChimpTwo, salamander, beagleOne, tardigradeOne]
 
+console.log(crewMembers[0]);
+
 // for (let i = 0; i < crewMembers.length; i++) {
 //    return crewMembers[i]["astronautID"] = Math.ceil(Math.random()*10);
 // }
