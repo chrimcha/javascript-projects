@@ -6,26 +6,78 @@
     <style>
       label { display: block; margin-bottom: 7px;}
     </style>
+    <script>
+      window.addEventListener("load", function() {
+        let form = document.querySelector("form");
+        form.addEventListener("submit", function(event) {        
+        let numOfRocketBooster = document.querySelector("input[name=boosterCount]");
+        if (numOfRocketBooster.value < 0 || numOfRocketBooster.value > 9) {
+            alert("Number of Rocket Boosters can only be a positive number less than 10!");
+            // stop the form submission
+            event.preventDefault();
+        }
+        });
+      });
+
+      window.addEventListener("load", function() {
+        let form = document.querySelector("form");
+        form.addEventListener("submit", function(event) {
+        let nameInput = document.querySelector("input[name=testName]");
+        let dateInput = document.querySelector("input[name=testDate]");
+        let typeOfRocket = document.querySelector("select[name=rocketType]");
+        let numOfRocketBooster = document.querySelector("input[name=boosterCount]");
+        let ratingForWind = document.querySelectorAll("input[name=windRating]");
+        let serverUse = document.querySelector("input[name=productionServers]");
+        
+        if (nameInput.value === "" || dateInput.value === "" || typeOfRocket.value === "" || numOfRocketBooster.value === "" || ratingForWind.value === "undefined") {
+            alert("All fields are required!");
+            // stop the form submission
+            event.preventDefault();
+        }
+
+        console.log(nameInput.value);
+        console.log(dateInput.value);
+        console.log(typeOfRocket.value);
+        console.log(numOfRocketBooster.value);
+        console.log(ratingForWind); //figure out how to use Nodelist
+        console.log(serverUse.value); //default is 'on'
+        });
+    });
+  </script>
   </head>
   <body>
-    <!-- TODO: add form here -->
-
-    <form>
-      <label>
-        First Name:
-        <input name="submitted-name" />
-      </label>
-    </form>
     
-    <form>
-      <label>
-        Last Name:
-        <input otherName="submitted-name" />
-      </label>
-    </form>
+    <!-- TODO: add form here -->    
+      <form action="https://handlers.education.launchcode.org/request-parrot" method="POST">
+        <fieldset>
+          <legend><h1>Rocket Simulation</h1></legend>
+            <label>Test Name: <input type="text" name="testName"/></label>
+            <label>Test Date: <input type="date" name="testDate"/></label>
+            <label>Rocket Type:
+                <select name="rocketType">
+                <option value="">* Select Type *</option>
+                <option value="Brant">Brant</option>
+                <option value="Lynx">Lynx</option>
+                <option value="Orion">Orion</option>
+                <option value="Terrier">Terrier</option>
+                </select>          
+            </label>
+            <label>Number of Rocket Boosters: <input type="number" name="boosterCount"/>         
+            </label>
+            <label>Wind Rating:
+              <label>No Wind<input type="radio" id="ratingChoice1" name="windRating"/></label>
+              <label>Mild<input type="radio" id="ratingChoice2" name="windRating" value="10"/></label>
+              <label>Strong<input type="radio" id="ratingChoice3" name="windRating" value="20"/></label>
+            </label>
+            <label>Use production grade servers <input type="checkbox" name="productionServers"/></label>
 
-    <p>WARNING: This ONLY works in <b>replit</b> if this "result" page is opened in its own window. Click the icon that shows a box with an arrow coming out of it.
-    </p>
-  </body>
-  
+            <br>
+
+            <button>Run Simulation</button>
+
+            <br>
+            <br>
+        </fieldset>
+      </form>
+  </body>  
 </html>
