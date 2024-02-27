@@ -16,9 +16,14 @@
     width: 100%;
 }
 
+#rocket {
+    position: relative;   
+}
+
 #spaceShuttleHeight {
     display: inline-block;
 }
+
 
 .center-block {
     text-align: center; 
