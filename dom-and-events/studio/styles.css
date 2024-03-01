@@ -17,7 +17,11 @@
 }
 
 #rocket {
-    position: relative;   
+    position: relative;
+    up: "";
+    down: "";
+    left: "";
+    right: "";
 }
 
 #spaceShuttleHeight {
