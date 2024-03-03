@@ -15,6 +15,15 @@ function init () {
     const leftButton = document.getElementById("left");
     const rightButton = document.getElementById("right");
     const rocketImage = document.querySelector("#rocket");
+    
+
+    const getNumber = function(str) {
+        return parseInt(str);
+    }
+
+    const transformToString = function(num) {
+        return num + 'px';
+    }
 
     takeOffButton.addEventListener("click", function() {
         let confirmTakeOff = confirm("Confirm that the shuttle is ready for takeoff.");
@@ -57,8 +66,11 @@ function init () {
 
     leftButton.addEventListener("click", function() {
         // let leftward = parseInt("10px") + ;
+        let elementNum = parseInt(rocketImage.style.left);
+        console.log(elementNum);
 
-        rocketImage.setAttribute("style", "left: 10px;");
+        // rocketImage.style.left = transformToString(getNumber(elementNum.style.left)) + 10;
+        // rocketImage.setAttribute("style", "left: 10px;");
     });
 
     rightButton.addEventListener("click", function() {
@@ -66,38 +78,6 @@ function init () {
 
         rocketImage.setAttribute("style", "up: 10px;");
     });
-
-
-
-    
-    //or
-    // button.addEventListener('click', event => {
-    //     paragraph.innerHTML = 'Houston! We have liftoff!';
-    //  });
-
-    //code that makes Abort Mission button red when hovering over it and back to default color when hovering out of it 
-    // missionAbort.addEventListener("mouseover", event => {
-    //     // console.log('yes');
-    //     missionAbort.setAttribute("style", "background-color: red;");
-    // });
-
-    // missionAbort.addEventListener("mouseout", event => {
-    //     // console.log('yes');
-    //     missionAbort.setAttribute("style", "");
-    // });
-
-    //or
-    // missionAbort.addEventListener("mouseout", function( event ) {
-    //     event.target.style.backgroundColor = "";
-    // });
-
-    // missionAbort.addEventListener("click", event => {
-    //     let c = window.confirm("Are you sure you want to abort the mission?");
-    //     // console.log(c);
-    //     if (c === true) {
-    //         paragraph.innerHTML = "Mission aborted! Space shuttle returning home";
-    //     }
-    // });
 
 }
 
